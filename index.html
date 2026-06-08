@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscrição — Retiro de Adolescentes</title>
@@ -874,7 +873,7 @@
 <script>
   // ── CONFIGURAÇÃO ──────────────────────────────────────────────
   // Cole aqui a URL do seu Google Apps Script após publicar
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx-1EAO3TGxol97dqTwi4v2EEr7yLkCL-NWZpwYC2xgtn6fBfgzXGnvLfa3U1FQkbgt/exec';
+  const APPS_SCRIPT_URL = 'COLE_SUA_URL_AQUI';
   // ─────────────────────────────────────────────────────────────
 
   // Auto date
@@ -1040,36 +1039,28 @@
     try {
       const dados = coletarDados(this);
 
-      // Envia via JSONP (mais confiável com Apps Script)
+      // Cria um iframe oculto para enviar os dados via GET
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+
       const params = new URLSearchParams(dados).toString();
-      const url = APPS_SCRIPT_URL + '?callback=handleResponse&' + params;
+      const url = APPS_SCRIPT_URL + '?' + params;
 
-      const script = document.createElement('script');
-      script.src = url;
-
-      window.handleResponse = function(data) {
-        script.remove();
-        delete window.handleResponse;
-        mostrarSucesso();
+      iframe.onload = function() {
+        setTimeout(() => {
+          iframe.remove();
+          mostrarSucesso();
+        }, 500);
       };
 
-      // Timeout de segurança — 8 segundos
-      const timeout = setTimeout(() => {
-        script.remove();
-        delete window.handleResponse;
+      iframe.onerror = function() {
+        iframe.remove();
         setBtnLoading(false);
-        mostrarErro('Tempo esgotado. Verifique sua conexão e tente novamente.');
-      }, 8000);
-
-      script.onload = () => clearTimeout(timeout);
-      script.onerror = () => {
-        clearTimeout(timeout);
-        script.remove();
-        setBtnLoading(false);
-        mostrarErro('Erro ao enviar. Tente novamente.');
+        mostrarErro('Erro ao enviar. Verifique sua conexão e tente novamente.');
       };
 
-      document.head.appendChild(script);
+      iframe.src = url;
 
     } catch (err) {
       setBtnLoading(false);
