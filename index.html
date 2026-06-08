@@ -596,7 +596,6 @@
       </svg>
     </div>
 
-    <p class="tagline">Comunicação · Planejamento · Unidade · Propósito</p>
     <h1 class="title-main">Retiro de Adolescentes</h1>
     <p class="title-sub">A Carta e a Bússola</p>
     <div class="event-badge">
@@ -618,7 +617,7 @@
       <div class="section-header">
         <div class="section-icon">👤</div>
         <span class="section-title">Dados do Adolescente</span>
-        <span class="section-num">01 / 05</span>
+        <span class="section-num">01 / 04</span>
       </div>
       <div class="card">
         <div class="corner-tl"></div>
@@ -654,69 +653,23 @@
             <input class="field-input" type="text" name="endereco" placeholder="Rua, número, bairro, cidade" required>
           </div>
           <div class="field">
-            <label class="field-label">Telefone do Adolescente</label>
-            <input class="field-input" type="tel" name="tel_adol" placeholder="(00) 90000-0000">
+            <label class="field-label">Telefone de Contato <span class="req">*</span></label>
+            <input class="field-input" type="tel" name="tel_contato" placeholder="(00) 90000-0000" required>
           </div>
           <div class="field">
-            <label class="field-label">Turma / Célula</label>
-            <input class="field-input" type="text" name="celula" placeholder="Nome da turma">
+            <label class="field-label">Grupo Caseiro</label>
+            <input class="field-input" type="text" name="grupo_caseiro" placeholder="Nome do grupo caseiro">
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEÇÃO 2: DADOS DO RESPONSÁVEL -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-icon">👨‍👧</div>
-        <span class="section-title">Responsável Legal</span>
-        <span class="section-num">02 / 05</span>
-      </div>
-      <div class="card">
-        <div class="corner-tl"></div>
-        <div class="corner-br"></div>
-        <div class="grid-2">
-          <div class="field span-2">
-            <label class="field-label">Nome do Responsável <span class="req">*</span></label>
-            <input class="field-input" type="text" name="resp_nome" placeholder="Nome completo" required>
-          </div>
-          <div class="field">
-            <label class="field-label">Grau de Parentesco <span class="req">*</span></label>
-            <select class="field-input" name="resp_parentesco" required>
-              <option value="">Selecione</option>
-              <option>Pai</option>
-              <option>Mãe</option>
-              <option>Avó / Avô</option>
-              <option>Tio / Tia</option>
-              <option>Outro</option>
-            </select>
-          </div>
-          <div class="field">
-            <label class="field-label">CPF do Responsável</label>
-            <input class="field-input" type="text" name="resp_cpf" placeholder="000.000.000-00">
-          </div>
-          <div class="field">
-            <label class="field-label">WhatsApp <span class="req">*</span></label>
-            <input class="field-input" type="tel" name="resp_whatsapp" placeholder="(00) 90000-0000" required>
-          </div>
-          <div class="field">
-            <label class="field-label">Telefone Alternativo</label>
-            <input class="field-input" type="tel" name="resp_tel2" placeholder="(00) 90000-0000">
-          </div>
-          <div class="field span-2">
-            <label class="field-label">E-mail</label>
-            <input class="field-input" type="email" name="resp_email" placeholder="email@exemplo.com">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SEÇÃO 3: SAÚDE -->
+    <!-- SEÇÃO 2: SAÚDE -->
     <div class="section">
       <div class="section-header">
         <div class="section-icon">🏥</div>
         <span class="section-title">Saúde & Necessidades</span>
-        <span class="section-num">03 / 05</span>
+        <span class="section-num">02 / 03</span>
       </div>
       <div class="card">
         <div class="corner-tl"></div>
@@ -735,101 +688,46 @@
             <input class="field-input" type="text" name="saude_obs" placeholder="Asma, diabetes, epilepsia, etc.">
           </div>
           <div class="field">
-            <label class="field-label">Restrição alimentar</label>
+            <label class="field-label">Restrição alimentar <span class="req">*</span></label>
             <div class="options-grid" style="margin-top:8px">
               <div class="option-item">
-                <input type="radio" name="alimentar" value="nenhuma" id="al0">
+                <input type="radio" name="alimentar" value="nenhuma" id="al0" required>
                 <label class="option-label" for="al0"><span class="dot"></span>Nenhuma</label>
               </div>
               <div class="option-item">
-                <input type="radio" name="alimentar" value="vegetariana" id="al1">
-                <label class="option-label" for="al1"><span class="dot"></span>Vegetariana</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="alimentar" value="vegana" id="al2">
-                <label class="option-label" for="al2"><span class="dot"></span>Vegana</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="alimentar" value="sem_gluten" id="al3">
-                <label class="option-label" for="al3"><span class="dot"></span>Sem Glúten</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="alimentar" value="outra" id="al4">
-                <label class="option-label" for="al4"><span class="dot"></span>Outra</label>
+                <input type="radio" name="alimentar" value="sim" id="al1">
+                <label class="option-label" for="al1"><span class="dot"></span>Sim</label>
               </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="field-label">Sabe nadar?</label>
-            <div class="options-grid" style="margin-top:8px">
-              <div class="option-item">
-                <input type="radio" name="nadar" value="sim" id="n1">
-                <label class="option-label" for="n1"><span class="dot"></span>Sim</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="nadar" value="nao" id="n2">
-                <label class="option-label" for="n2"><span class="dot"></span>Não</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="nadar" value="pouco" id="n3">
-                <label class="option-label" for="n3"><span class="dot"></span>Um pouco</label>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="field-label">Necessidades especiais</label>
-            <div class="needs-grid" style="margin-top:8px">
-              <div class="option-item">
-                <input type="checkbox" name="ne_mob" id="ne1">
-                <label class="option-label checkbox-label" for="ne1"><span class="dot"></span>Mobilidade</label>
-              </div>
-              <div class="option-item">
-                <input type="checkbox" name="ne_vis" id="ne2">
-                <label class="option-label checkbox-label" for="ne2"><span class="dot"></span>Visual</label>
-              </div>
-              <div class="option-item">
-                <input type="checkbox" name="ne_aud" id="ne3">
-                <label class="option-label checkbox-label" for="ne3"><span class="dot"></span>Auditiva</label>
-              </div>
-              <div class="option-item">
-                <input type="checkbox" name="ne_neuro" id="ne4">
-                <label class="option-label checkbox-label" for="ne4"><span class="dot"></span>Neurodiversidade</label>
-              </div>
+            <div id="alimentarDetalheBox" style="display:none; margin-top:10px;">
+              <input class="field-input" type="text" name="alimentar_detalhe" id="alimentarDetalhe" placeholder="Descreva a restrição alimentar...">
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEÇÃO 4: LOGÍSTICA -->
+    <!-- SEÇÃO 3: LOGÍSTICA -->
     <div class="section">
       <div class="section-header">
         <div class="section-icon">🚌</div>
         <span class="section-title">Logística & Transporte</span>
-        <span class="section-num">04 / 05</span>
+        <span class="section-num">03 / 03</span>
       </div>
       <div class="card">
         <div class="corner-tl"></div>
         <div class="corner-br"></div>
         <div style="display:flex; flex-direction:column; gap:20px;">
           <div class="field">
-            <label class="field-label">Como vai ao retiro? <span class="req">*</span></label>
+            <label class="field-label">Precisa de carona? <span class="req">*</span></label>
             <div class="options-grid" style="margin-top:8px">
               <div class="option-item">
-                <input type="radio" name="transporte" value="onibus_igreja" id="t1" required>
-                <label class="option-label" for="t1"><span class="dot"></span>Ônibus da Igreja</label>
+                <input type="radio" name="carona" value="sim" id="t1" required>
+                <label class="option-label" for="t1"><span class="dot"></span>Sim, preciso de carona</label>
               </div>
               <div class="option-item">
-                <input type="radio" name="transporte" value="carro_proprio" id="t2">
-                <label class="option-label" for="t2"><span class="dot"></span>Carro Próprio</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="transporte" value="carona" id="t3">
-                <label class="option-label" for="t3"><span class="dot"></span>Carona</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="transporte" value="a_definir" id="t4">
-                <label class="option-label" for="t4"><span class="dot"></span>A Definir</label>
+                <input type="radio" name="carona" value="nao" id="t2">
+                <label class="option-label" for="t2"><span class="dot"></span>Não, tenho transporte</label>
               </div>
             </div>
           </div>
@@ -858,23 +756,6 @@
               </div>
             </div>
           </div>
-          <div class="field">
-            <label class="field-label">É a primeira vez no retiro?</label>
-            <div class="options-grid" style="margin-top:8px">
-              <div class="option-item">
-                <input type="radio" name="primeira_vez" value="sim" id="pv1">
-                <label class="option-label" for="pv1"><span class="dot"></span>Sim, primeira vez!</label>
-              </div>
-              <div class="option-item">
-                <input type="radio" name="primeira_vez" value="nao" id="pv2">
-                <label class="option-label" for="pv2"><span class="dot"></span>Já fui antes</label>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="field-label">Observações adicionais</label>
-            <textarea class="field-input" name="obs" placeholder="Alguma informação importante para a equipe saber..."></textarea>
-          </div>
         </div>
       </div>
     </div>
@@ -884,7 +765,7 @@
       <div class="section-header">
         <div class="section-icon">✍️</div>
         <span class="section-title">Autorização & Termos</span>
-        <span class="section-num">05 / 05</span>
+        <span class="section-num">04 / 04</span>
       </div>
       <div class="card">
         <div class="corner-tl"></div>
@@ -992,11 +873,27 @@
 <script>
   // ── CONFIGURAÇÃO ──────────────────────────────────────────────
   // Cole aqui a URL do seu Google Apps Script após publicar
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx-1EAO3TGxol97dqTwi4v2EEr7yLkCL-NWZpwYC2xgtn6fBfgzXGnvLfa3U1FQkbgt/exec';
+  const APPS_SCRIPT_URL = 'COLE_SUA_URL_AQUI';
   // ─────────────────────────────────────────────────────────────
 
   // Auto date
   document.getElementById('dataAssinatura').value = new Date().toISOString().split('T')[0];
+
+  // Mostrar/esconder campo de restrição alimentar
+  document.querySelectorAll('input[name="alimentar"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      const box = document.getElementById('alimentarDetalheBox');
+      const input = document.getElementById('alimentarDetalhe');
+      if (radio.value === 'sim' && radio.checked) {
+        box.style.display = 'block';
+        input.required = true;
+      } else {
+        box.style.display = 'none';
+        input.required = false;
+        input.value = '';
+      }
+    });
+  });
 
   // Progress bar
   window.addEventListener('scroll', () => {
@@ -1041,7 +938,7 @@
     });
 
     // Radio groups obrigatórios
-    ['transporte', 'camiseta'].forEach(name => {
+    ['carona', 'camiseta', 'alimentar'].forEach(name => {
       if (!form.querySelector(`input[name="${name}"]:checked`)) valid = false;
     });
 
@@ -1054,8 +951,13 @@
     const dados = {};
     fd.forEach((v, k) => { dados[k] = v; });
 
-    // Checkboxes que podem não aparecer no FormData se desmarcados
-    ['ne_mob','ne_vis','ne_aud','ne_neuro','autoriza_foto'].forEach(name => {
+    // Alimentar com detalhe se "sim"
+    if (dados['alimentar'] === 'sim' && dados['alimentar_detalhe']) {
+      dados['alimentar'] = 'Sim: ' + dados['alimentar_detalhe'];
+    }
+
+    // Checkboxes opcionais
+    ['autoriza_foto'].forEach(name => {
       dados[name] = form.querySelector(`input[name="${name}"]`)?.checked ? 'Sim' : 'Não';
     });
 
