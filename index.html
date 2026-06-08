@@ -1039,15 +1039,36 @@
     try {
       const dados = coletarDados(this);
 
-      const resp = await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dados)
-      });
+      // Envia via JSONP (mais confiável com Apps Script)
+      const params = new URLSearchParams(dados).toString();
+      const url = APPS_SCRIPT_URL + '?callback=handleResponse&' + params;
 
-      // no-cors não retorna status — se chegou aqui, foi enviado
-      mostrarSucesso();
+      const script = document.createElement('script');
+      script.src = url;
+
+      window.handleResponse = function(data) {
+        script.remove();
+        delete window.handleResponse;
+        mostrarSucesso();
+      };
+
+      // Timeout de segurança — 8 segundos
+      const timeout = setTimeout(() => {
+        script.remove();
+        delete window.handleResponse;
+        setBtnLoading(false);
+        mostrarErro('Tempo esgotado. Verifique sua conexão e tente novamente.');
+      }, 8000);
+
+      script.onload = () => clearTimeout(timeout);
+      script.onerror = () => {
+        clearTimeout(timeout);
+        script.remove();
+        setBtnLoading(false);
+        mostrarErro('Erro ao enviar. Tente novamente.');
+      };
+
+      document.head.appendChild(script);
 
     } catch (err) {
       setBtnLoading(false);
