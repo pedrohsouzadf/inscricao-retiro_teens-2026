@@ -4,7 +4,15 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Retiro de Adolescentes 2026 — A Carta e a Bússola</title>
+<title>Inscrição — Retiro de Adolescentes</title>
+
+<!-- META TAGS PARA COPARTILHAMENTO NO WHATSAPP (Preview do Link) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://retiroteens2026.com.br/">
+<meta property="og:title" content="Retiro de Adolescentes — A Carta e a Bússola">
+<meta property="og:description" content="Retiro de adolescentes - Parte da Igreja em Brasília">
+<meta property="og:image" content="https://retiroteens2026.com.br/favicon.png"> <!-- Certifique-se de que a imagem existe neste caminho -->
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -31,7 +39,7 @@
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-    padding-top: 70px; /* Espaço para o menu fixo */
+    padding-top: 70px;
   }
 
   /* ── Background stars ── */
@@ -136,11 +144,13 @@
   }
   .church-tag {
     font-family: 'Orbitron', monospace;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: var(--muted);
+    font-size: 13px; /* Aumentado conforme solicitado */
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold-light); /* Destaque sutil */
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    text-shadow: 0 0 10px rgba(201,162,39,.3);
   }
   .compass-icon {
     width: 80px;
@@ -407,7 +417,7 @@
 
   <!-- GLOBAL HEADER -->
   <div class="header">
-    <div class="church-tag">Igreja em Brasília</div>
+    <div class="church-tag">Parte da Igreja em Brasília</div> <!-- Nome alterado e tamanho de fonte maior via CSS -->
     <div class="compass-icon">
       <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="40" cy="40" r="38" stroke="#7a5f14" stroke-width="1"/>
@@ -444,8 +454,8 @@
       <div class="card content-text">
         <div class="scan-line"></div>
         <h3 style="font-family:'Orbitron', monospace; color:var(--gold-light); margin-bottom: 16px; letter-spacing: 1px;">A CARTA E A BÚSSOLA</h3>
-        <p><strong>A Carta</strong> - Em vez de um adversário a ser combatido, a vida cristã é apresentada como um território a ser explorado. A "Carta" representa as Escrituras — o guia que contém as promessas, os caminhos e as instruções para não se perder em meio aos desafios do mundo.</p>
-        <p><strong>A Bússola</strong> - É o instrumento que dá o norte. Mesmo em terrenos desconhecidos ou "gigantes" invisíveis (como as pressões sociais e distrações digitais), o jovem tem um instrumento interno e espiritual para manter o foco no destino correto. É o Espírito Santo, sua atuação nos nascidos de novo. E porque não se chegará à presença de Deus sem Ele.</p>
+        <p><strong>A Carta</strong> - Em vez de um adversário a ser combatido, a vida cristã é apresentada como um território a ser explorado. A "Carta" representa as Escrituras — o guia que contém as promessas, os caminhos e as instruções para não se chegar a perder em meio aos desafios do mundo.</p>
+        <p><strong>A Bússola</strong> - É o instrumento que dá o norte. Mesmo em terrains desconhecidos ou "gigantes" invisíveis (como as pressões sociais e distrações digitais), o jovem tem um instrumento interno e espiritual para manter o foco no destino correto. É o Espírito Santo, sua atuação nos nascidos de novo. E porque não se chegará à presença de Deus sem Ele.</p>
         
         <div style="text-align: center; margin-top: 30px;">
           <button class="btn-submit" style="padding: 14px 32px; font-size: 11px;" onclick="switchTab('inscricao')">Ir para Inscrição ➔</button>
@@ -464,13 +474,13 @@
       <div class="card content-text">
         
         <div class="content-subtitle">📍 DATA E LOCAL DETALHADO</div>
-        <p><strong>Data:</strong> 24 a 27 de Julho de 2026<br>
+        <p><strong>Data:</strong> 24 a 26 de Julho de 2026<br> <!-- Corrigido para 24 a 26 -->
         <strong>Local:</strong> Sítio do Engenho<br>
         Ambiente totalmente preparado com infraestrutura completa para lazer, hospedagem e reuniões espirituais protegidas e confortáveis.</p>
 
         <div class="content-subtitle">⏰ HORÁRIOS DE INÍCIO E TÉRMINO</div>
-        <p><strong>Início:</strong> 24 de Julho (Quinta-feira) — Check-in e recepção a partir das 15:00.<br>
-        <strong>Término:</strong> 27 de Julho (Domingo) — Encerramento e saída após o almoço, às 14:00.</p>
+        <p><strong>Início:</strong> 24 de Julho (Sexta-feira) — Check-in e recepção a partir das 15:00.<br>
+        <strong>Término:</strong> 26 de Julho (Domingo) — Encerramento e saída após o almoço, às 14:00.</p>
 
         <div class="content-subtitle">👥 PÚBLICO ALVO</div>
         <p>Exclusivo para adolescentes de <strong>11 a 19 anos</strong> em busca de comunhão, amizades fundamentadas na palavra e um verdadeiro direcionamento espiritual.</p>
@@ -482,7 +492,7 @@
     </div>
   </div>
 
-  <!-- ── TAB 3: INSCRIÇÃO (FORMULÁRIO ATUALIZADO) ── -->
+  <!-- ── TAB 3: INSCRIÇÃO ── -->
   <div id="tab-inscricao" class="tab-content">
     <form id="inscricaoForm" novalidate>
       
@@ -654,7 +664,7 @@
           </div>
           <div class="terms-box">
             <strong style="color:var(--gold-light);">Termos de Participação — Retiro "A Carta e a Bússola"</strong><br><br>
-            1. O responsável autoriza a participação do adolescente em todas as atividades recreativas, espirituais e de convivência promovidas durante o retiro.<br><br>
+            1. O responsável autoriza a participação do adolescente em todas as atividades recreativas, espirituais e de convivência promovidas durante o retiro (24 a 26 de julho).<br><br> <!-- Corrigido para 24 a 26 -->
             2. Em caso de emergência médica, a equipe organizadora poderá tomar decisões de primeiros socorros e acionar atendimento médico competente.<br><br>
             3. As informações fornecidas são verídicas, isentando a organização de omissões.<br><br>
             4. O participante se compromete a zelar pelas regras estipuladas de convivência.<br><br>
@@ -702,7 +712,7 @@
     <div class="success-screen" id="successScreen">
       <div class="success-icon">⚜️</div>
       <h2 class="success-title">Inscrição Confirmada!</h2>
-      <p class="success-msg">Que alegria ter você no retiro!<br><br>Em breve você receberá mais informações pelo WhatsApp.<br><br><strong style="color:var(--gold-light);">A Carta e a Bússola — Julho 24–27</strong></p>
+      <p class="success-msg">Que alegria ter você no retiro!<br><br>Em breve você receberá mais informações pelo WhatsApp.<br><br><strong style="color:var(--gold-light);">A Carta e a Bússola — Julho 24–26</strong></p> <!-- Corrigido para 24 a 26 -->
     </div>
   </div>
 
@@ -747,7 +757,6 @@
 </div>
 
 <script>
-  // URL DO SCRIPT DO GOOGLE
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx-1EAO3TGxol97dqTwi4v2EEr7yLkCL-NWZpwYC2xgtn6fBfgzXGnvLfa3U1FQkbgt/exec';
 
   // Lógica de Abas da SPA
@@ -757,7 +766,6 @@
     
     document.getElementById('tab-' + tabId).classList.add('active');
     
-    // Encontrar o botão correto para marcar como ativo
     const btnIndex = ['home', 'info', 'inscricao', 'contatos'].indexOf(tabId);
     if(btnIndex !== -1) {
       document.querySelectorAll('.nav-btn')[btnIndex].classList.add('active');
@@ -777,6 +785,7 @@
       let idade = hoje.getFullYear() - dataNasc.getFullYear();
       const m = hoje.getMonth() - dataNasc.getMonth();
       if (m < 0 || (m === 0 && hoje.getDate() < dataNasc.getDate())) {
+        offsetIdade = -1;
         idade--;
       }
       document.getElementById('idadeCalculada').value = idade >= 0 ? idade : 0;
