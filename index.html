@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link rel="icon" type="image/png" href="card-whatsapp.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscrição — Retiro de Adolescentes</title>
@@ -10,6 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://retiroteens2026.com.br/">
 <meta property="og:title" content="Retiro de Adolescentes — A Carta e a Bússola">
+<meta property="og:description" content="Retiro de adolescentes - Parte da Igreja em Brasília">
 <meta property="og:image" content="https://retiroteens2026.com.br/card-whatsapp.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -143,10 +144,10 @@
   }
   .church-tag {
     font-family: 'Orbitron', monospace;
-    font-size: 13px; /* Aumentado conforme solicitado */
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 3px;
-    color: var(--gold-light); /* Destaque sutil */
+    color: var(--gold-light);
     text-transform: uppercase;
     margin-bottom: 18px;
     text-shadow: 0 0 10px rgba(201,162,39,.3);
@@ -188,23 +189,6 @@
     letter-spacing: 4px;
     margin-top: 4px;
   }
-
-  .event-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 10px 24px;
-    border: 1px solid var(--gold-dim);
-    border-radius: 2px;
-    background: linear-gradient(135deg, rgba(201,162,39,.08), rgba(201,162,39,.02));
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--gold-light);
-    text-transform: uppercase;
-  }
-  .event-badge span { color: var(--muted); }
 
   .divider {
     display: flex;
@@ -376,16 +360,20 @@
   .info-box .info-icon { font-size: 16px; flex-shrink: 0; }
   .terms-box { background: rgba(3,13,26,.7); border: 1px solid var(--navy-border); border-radius: 3px; padding: 16px; font-size: 12px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; max-height: 120px; overflow-y: auto; }
 
-  /* ── SUBMIT ── */
+  /* ── SUBMIT & BUTTONS ── */
   .submit-area { text-align: center; margin-top: 40px; }
   .btn-submit { position: relative; display: inline-flex; align-items: center; gap: 12px; padding: 18px 56px; background: linear-gradient(135deg, var(--gold-dim), rgba(201,162,39,.4)); border: 1px solid var(--gold); border-radius: 3px; color: var(--gold-light); font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; cursor: pointer; transition: all .3s; outline: none; overflow: hidden; }
   .btn-submit:hover { background: linear-gradient(135deg, rgba(201,162,39,.5), rgba(201,162,39,.6)); box-shadow: 0 0 30px rgba(201,162,39,.3); transform: translateY(-1px); }
   .submit-verse { margin-top: 16px; font-size: 11px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
 
+  /* Button específico para nova inscrição com layout cyberpunk menor */
+  .btn-secondary { background: linear-gradient(135deg, var(--cyan-dim), rgba(0,212,255,.2)); border: 1px solid var(--cyan); color: var(--white); margin-top: 24px; padding: 12px 32px; font-size: 11px; }
+  .btn-secondary:hover { background: linear-gradient(135deg, rgba(0,212,255,.4), rgba(0,212,255,.5)); box-shadow: 0 0 20px rgba(0,212,255,.3); }
+
   /* ── FOOTER COMPASS ── */
   .footer-compass { text-align: center; margin-top: 60px; opacity: .3; }
-  .success-screen { display: none; text-align: center; padding: 80px 20px; }
-  .success-screen.show { display: block; }
+  .success-screen { display: none; text-align: center; padding: 60px 20px; }
+  .success-screen.show { display: block; animation: fadeUp 0.5s ease forwards; }
   .success-icon { font-size: 64px; margin-bottom: 24px; animation: pulse 2s ease infinite; }
   .success-title { font-family: 'Orbitron', monospace; font-size: 24px; font-weight: 700; color: var(--gold-light); letter-spacing: 3px; margin-bottom: 12px; }
   .success-msg { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 400px; margin: 0 auto; }
@@ -416,9 +404,9 @@
 
   <!-- GLOBAL HEADER -->
   <div class="header">
-    <div class="church-tag">Parte da Igreja em Brasília</div> <!-- Nome alterado e tamanho de fonte maior via CSS -->
+    <div class="church-tag">Parte da Igreja em Brasília</div>
     <div class="compass-icon">
-      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
         <circle cx="40" cy="40" r="38" stroke="#7a5f14" stroke-width="1"/>
         <circle cx="40" cy="40" r="32" stroke="#c9a227" stroke-width=".5" stroke-dasharray="4 4"/>
         <circle cx="40" cy="40" r="6" fill="#0a1f35" stroke="#c9a227" stroke-width="1"/>
@@ -453,8 +441,8 @@
       <div class="card content-text">
         <div class="scan-line"></div>
         <h3 style="font-family:'Orbitron', monospace; color:var(--gold-light); margin-bottom: 16px; letter-spacing: 1px;">A CARTA E A BÚSSOLA</h3>
-        <p><strong>A Carta</strong> - Em vez de um adversário a ser combatido, a vida cristã é apresentada como um território a ser explorado. A "Carta" representa as Escrituras — o guia que contém as promessas, os caminhos e as instruções para não se chegar a perder em meio aos desafios do mundo.</p>
-        <p><strong>A Bússola</strong> - É o instrumento que dá o norte. Mesmo em terrains desconhecidos ou "gigantes" invisíveis (como as pressões sociais e distrações digitais), o jovem tem um instrumento interno e espiritual para manter o foco no destino correto. É o Espírito Santo, sua atuação nos nascidos de novo. E porque não se chegará à presença de Deus sem Ele.</p>
+        <p><strong>A Carta</strong> - Em vez de um adversário a ser combatido, a vida cristã é apresentada como um territory a ser explorado. A "Carta" representa as Escrituras — o guia que contém as promessas, os caminhos e as instruções para não se perder em meio aos desafios do mundo.</p>
+        <p><strong>A Bússola</strong> - É o instrumento que dá o norte. Mesmo em terrenos desconhecidos ou "gigantes" invisíveis (como as pressões sociais e distrações digitais), o jovem tem um instrumento interno e espiritual para manter o foco no destino correto. É o Espírito Santo, sua atuação nos nascidos de novo. E porque não se chegará à presença de Deus sem Ele.</p>
         
         <div style="text-align: center; margin-top: 30px;">
           <button class="btn-submit" style="padding: 14px 32px; font-size: 11px;" onclick="switchTab('inscricao')">Ir para Inscrição ➔</button>
@@ -473,7 +461,7 @@
       <div class="card content-text">
         
         <div class="content-subtitle">📍 DATA E LOCAL DETALHADO</div>
-        <p><strong>Data:</strong> 24 a 26 de Julho de 2026<br> <!-- Corrigido para 24 a 26 -->
+        <p><strong>Data:</strong> 24 a 26 de Julho de 2026<br>
         <strong>Local:</strong> Sítio do Engenho<br>
         Ambiente totalmente preparado com infraestrutura completa para lazer, hospedagem e reuniões espirituais protegidas e confortáveis.</p>
 
@@ -663,7 +651,7 @@
           </div>
           <div class="terms-box">
             <strong style="color:var(--gold-light);">Termos de Participação — Retiro "A Carta e a Bússola"</strong><br><br>
-            1. O responsável autoriza a participação do adolescente em todas as atividades recreativas, espirituais e de convivência promovidas durante o retiro (24 a 26 de julho).<br><br> <!-- Corrigido para 24 a 26 -->
+            1. O responsável autoriza a participação do adolescente em todas as atividades recreativas, espirituais e de convivência promovidas durante o retiro (24 a 26 de julho).<br><br>
             2. Em caso de emergência médica, a equipe organizadora poderá tomar decisões de primeiros socorros e acionar atendimento médico competente.<br><br>
             3. As informações fornecidas são verídicas, isentando a organização de omissões.<br><br>
             4. O participante se compromete a zelar pelas regras estipuladas de convivência.<br><br>
@@ -707,11 +695,18 @@
       </div>
     </form>
 
-    <!-- SUCCESS SCREEN -->
+    <!-- SUCCESS SCREEN (ATUALIZADA COM O NOVO BOTÃO) -->
     <div class="success-screen" id="successScreen">
       <div class="success-icon">⚜️</div>
       <h2 class="success-title">Inscrição Confirmada!</h2>
-      <p class="success-msg">Que alegria ter você no retiro!<br><br>Em breve você receberá mais informações pelo WhatsApp.<br><br><strong style="color:var(--gold-light);">A Carta e a Bússola — Julho 24–26</strong></p> <!-- Corrigido para 24 a 26 -->
+      <p class="success-msg">Que alegria ter você no retiro!<br><br>Em breve você receberá mais informações pelo WhatsApp.<br><br><strong style="color:var(--gold-light);">A Carta e a Bússola — Julho 24–26</strong></p>
+      
+      <!-- Botão para redefinir e fazer inscrição de outro filho -->
+      <div style="text-align: center;">
+        <button type="button" class="btn-submit btn-secondary" onclick="resetFormInscricao()">
+          ➕ Realizar Nova Inscrição
+        </button>
+      </div>
     </div>
   </div>
 
@@ -774,7 +769,36 @@
   }
 
   // Preenche data automática na assinatura
-  document.getElementById('dataAssinatura').value = new Date().toISOString().split('T')[0];
+  function atualizarDataAssinatura() {
+    document.getElementById('dataAssinatura').value = new Date().toISOString().split('T')[0];
+  }
+  atualizarDataAssinatura();
+
+  // Função para limpar o formulário e permitir novas inscrições (Múltiplos filhos)
+  function resetFormInscricao() {
+    const form = document.getElementById('inscricaoForm');
+    form.reset(); // Limpa todos os inputs de texto, selects e tira a seleção de radios/checkboxes
+    
+    // Oculta o campo extra de restrição alimentar por padrão
+    document.getElementById('alimentarDetalheBox').style.display = 'none';
+    document.getElementById('alimentarDetalhe').required = false;
+
+    // Reseta cores e estados visuais de erro ou carregamento anteriores
+    form.querySelectorAll('.field-input').forEach(f => { f.style.borderColor = ''; f.style.boxShadow = ''; });
+    form.querySelectorAll('.option-label').forEach(l => { l.style.borderColor = ''; });
+    setBtnLoading(false);
+
+    // Reaplica a data de hoje e limpa o visor de idade calculada
+    atualizarDataAssinatura();
+    document.getElementById('idadeCalculada').value = '';
+
+    // Troca as telas (Esconde a mensagem de sucesso e revela o formulário vazio novamente)
+    document.getElementById('successScreen').classList.remove('show');
+    form.style.display = 'block';
+    
+    // Rola a página suavemente de volta ao início do formulário
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   // Cálculo Automático da Idade Dinâmica
   document.getElementById('dataNascimento').addEventListener('change', function() {
@@ -784,7 +808,6 @@
       let idade = hoje.getFullYear() - dataNasc.getFullYear();
       const m = hoje.getMonth() - dataNasc.getMonth();
       if (m < 0 || (m === 0 && hoje.getDate() < dataNasc.getDate())) {
-        offsetIdade = -1;
         idade--;
       }
       document.getElementById('idadeCalculada').value = idade >= 0 ? idade : 0;
