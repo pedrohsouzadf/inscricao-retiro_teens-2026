@@ -441,9 +441,9 @@
       <div class="card content-text">
         <div class="scan-line"></div>
         <h3 style="font-family:'Orbitron', monospace; color:var(--gold-light); margin-bottom: 16px; letter-spacing: 1px;">A CARTA E A BÚSSOLA</h3>
-        <p><strong>A Carta</strong> - Em vez de um adversário a ser combatido, a vida cristã é apresentada como um territory a ser explorado. A "Carta" representa as Escrituras — o guia que contém as promessas, os caminhos e as instruções para não se perder em meio aos desafios do mundo.</p>
+        <p><strong>A Carta</strong> - Em vez de um adversário a ser combatido, a vida cristã é um território a ser explorado. a própria carta é um tesouro, que nos revela outros tesouros. A "Carta" representa as Escrituras — o guia que contém as promessas, os caminhos e as instruções para o desfrutar da bondade e do amor do Senhor Jesus, e não se perder em meio aos desafios deste mundo.</p>
         <p><strong>A Bússola</strong> - É o instrumento que dá o norte. Mesmo em terrenos desconhecidos ou "gigantes" invisíveis (como as pressões sociais e distrações digitais), o jovem tem um instrumento interno e espiritual para manter o foco no destino correto. É o Espírito Santo, sua atuação nos nascidos de novo. E porque não se chegará à presença de Deus sem Ele.</p>
-        
+         
         <div style="text-align: center; margin-top: 30px;">
           <button class="btn-submit" style="padding: 14px 32px; font-size: 11px;" onclick="switchTab('inscricao')">Ir para Inscrição ➔</button>
         </div>
@@ -459,7 +459,7 @@
         <span class="section-title">Diretrizes do Evento</span>
       </div>
       <div class="card content-text">
-        
+         
         <div class="content-subtitle">📍 DATA E LOCAL DETALHADO</div>
         <p><strong>Data:</strong> 24 a 26 de Julho de 2026<br>
         <strong>Local:</strong> Sítio do Engenho<br>
@@ -473,7 +473,8 @@
         <p>Exclusivo para adolescentes de <strong>11 a 19 anos</strong> em busca de comunhão, amizades fundamentadas na palavra e um verdadeiro direcionamento espiritual.</p>
 
         <div class="content-subtitle">💰 VALORES E PRAZOS</div>
-        <p>• <strong>Lote Único:</strong> Consulte os líderes organizadores para informações atualizadas sobre taxas e formas facilitadas de pagamento.<br>
+        <p>• <strong>Valor da Inscrição:</strong> R$ 195,00 (Este valor é à vista ou em até 3x).<br><br>
+        <span style="color:var(--gold-light); font-weight: 600;">Esse valor não deve ser um impeditivo para não ir ao retiro. Caso tenha alguma dificuldade em relação ao valor, procurar seu líder de GC.</span><br><br>
         <span style="color:var(--danger); font-size: 13px;">* Atenção: Vagas limitadas de acordo com a capacidade máxima do local.</span></p>
       </div>
     </div>
@@ -482,7 +483,7 @@
   <!-- ── TAB 3: INSCRIÇÃO ── -->
   <div id="tab-inscricao" class="tab-content">
     <form id="inscricaoForm" novalidate>
-      
+       
       <!-- BLOCO 1 -->
       <div class="section">
         <div class="section-header">
@@ -700,7 +701,7 @@
       <div class="success-icon">⚜️</div>
       <h2 class="success-title">Inscrição Confirmada!</h2>
       <p class="success-msg">Que alegria ter você no retiro!<br><br>Em breve você receberá mais informações pelo WhatsApp.<br><br><strong style="color:var(--gold-light);">A Carta e a Bússola — Julho 24–26</strong></p>
-      
+       
       <!-- Botão para redefinir e fazer inscrição de outro filho -->
       <div style="text-align: center;">
         <button type="button" class="btn-submit btn-secondary" onclick="resetFormInscricao()">
@@ -719,17 +720,17 @@
       </div>
       <div class="card">
         <p style="margin-bottom: 20px; color: var(--muted); font-size: 15px;">Dúvidas sobre o pagamento, logística ou autorizações? Entre em contato diretamente com a liderança responsável:</p>
-        
+         
         <div class="contact-item">
           <span class="contact-name">Walmir Souza</span>
           <a href="https://wa.me/5561983130605" target="_blank" class="contact-phone">(61) 98313-0605</a>
         </div>
-        
+         
         <div class="contact-item">
           <span class="contact-name">Fabiano Borges</span>
           <a href="https://wa.me/5561983130660" target="_blank" class="contact-phone">(61) 98313-0660</a>
         </div>
-        
+         
         <div class="contact-item">
           <span class="contact-name">Pedro Souza</span>
           <a href="https://wa.me/5561982600220" target="_blank" class="contact-phone">(61) 98260-0220</a>
@@ -757,14 +758,14 @@
   function switchTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-    
+     
     document.getElementById('tab-' + tabId).classList.add('active');
-    
+     
     const btnIndex = ['home', 'info', 'inscricao', 'contatos'].indexOf(tabId);
     if(btnIndex !== -1) {
       document.querySelectorAll('.nav-btn')[btnIndex].classList.add('active');
     }
-    
+     
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -778,7 +779,7 @@
   function resetFormInscricao() {
     const form = document.getElementById('inscricaoForm');
     form.reset(); // Limpa todos os inputs de texto, selects e tira a seleção de radios/checkboxes
-    
+     
     // Oculta o campo extra de restrição alimentar por padrão
     document.getElementById('alimentarDetalheBox').style.display = 'none';
     document.getElementById('alimentarDetalhe').required = false;
@@ -795,7 +796,7 @@
     // Troca as telas (Esconde a mensagem de sucesso e revela o formulário vazio novamente)
     document.getElementById('successScreen').classList.remove('show');
     form.style.display = 'block';
-    
+     
     // Rola a página suavemente de volta ao início do formulário
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
